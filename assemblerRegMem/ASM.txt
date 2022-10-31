@@ -1,0 +1,186 @@
+SETUP:LDI R0, $0    #Início do Setup
+STA R0, @288    #Zerando hexas
+STA R0, @289
+STA R0, @290
+STA R0, @291
+STA R0, @292
+STA R0, @293
+STA R0, @256    #Zerando leds
+STA R0, @257
+STA R0, @258
+STA R0, @0  #Armazenando 0 em unidade, dezena, centena, ...
+STA R0, @1
+STA R0, @2
+STA R0, @3
+STA R0, @4
+STA R0, @5
+STA R0, @6  #Constante de comparação
+STA R0, @10 #Flag de inibir contagem
+LDI R0, $1
+STA R0, @7  #Constante de incrementos
+LDI R0, $10
+STA R0, @8  #Constante de limite do display
+LDI R0, $9
+STA R0, @11
+STA R0, @12
+STA R0, @13
+STA R0, @14
+STA R0, @15
+STA R0, @16
+LOOP:LDA R1, @352   #Início do LOOP Carrega valor de KEY0
+CEQ R1, @6
+JEQ @DISPLAY    #Se não apertou, pula incremento
+JSR @INCREMENTO
+DISPLAY:JSR @WRITEDISPLAY   #Escrever no display
+LDA R1, @353    #Carrega valor de KEY1
+CEQ R1, @6
+JEQ @LIMIT
+JSR @SETUPLIMIT
+LIMIT:JSR @VERIFYLIMIT  #Verificação de limite sempre acontece
+LDA R1, @356    #Desvia para rotina de reset
+AND R1, @7
+CEQ R1, @6
+JEQ @FIM
+JSR @RESET
+FIM:JMP @LOOP
+INCREMENTO:STA R2, @511 #Rotina de Incremento Limpar KEY0
+LDA R3, @10  #Carrega flag
+CEQ R3, @6
+JEQ @UNIDADE
+JMP @RETINC
+UNIDADE:LDA R3, @0    #---Bloco que verifica unidade
+SOMA R3, @7
+CEQ R3, @8  #Compara unidade com 10
+JEQ @UNIDADEOVERFLOW
+STA R3, @0
+JMP @RETINC
+UNIDADEOVERFLOW:LDI R3, $0
+STA R3, @0  #---
+LDA R3, @1  #---Bloco que verifica dezena
+SOMA R3, @7
+CEQ R3, @8
+JEQ @DEZENAOVERFLOW
+STA R3, @1
+JMP @RETINC
+DEZENAOVERFLOW:LDI R3, $0
+STA R3, @1  #---
+LDA R3, @2  #---Bloco que verifica centena
+SOMA R3, @7
+CEQ R3, @8
+JEQ @CENTENAOVERFLOW
+STA R3, @2
+JMP @RETINC
+CENTENAOVERFLOW:LDI R3, $0
+STA R3, @2  #---
+LDA R3, @3  #---Bloco que verifica milhar
+SOMA R3, @7
+CEQ R3, @8
+JEQ @MILHAROVERFLOW
+STA R3, @3
+JMP @RETINC
+MILHAROVERFLOW:LDI R3, $0
+STA R3, @3  #---
+LDA R3, @4  #---Bloco que verifica dezena de milhar
+SOMA R3, @7
+CEQ R3, @8
+JEQ @DEZMILHAROVERFLOW
+STA R3, @4
+JMP @RETINC
+DEZMILHAROVERFLOW:LDI R3, $0
+STA R3, @4  #---
+LDA R3, @5  #---Bloco que verifica centena de milhar
+SOMA R3, @7
+CEQ R3, @8
+JEQ @CENMILHAROVERFLOW
+STA R3, @5
+JMP @RETINC
+CENMILHAROVERFLOW:LDI R3, $1    #Se é passou de 9 em centena de milhar, overflow!
+STA R3, @257
+STA R3, @10 #---
+RETINC:RET
+WRITEDISPLAY:LDA R3, @0 #Rotina que escreve os valores nos hexas correspondentes
+STA R3, @288
+LDA R3, @1
+STA R3, @289
+LDA R3, @2
+STA R3, @290
+LDA R3, @3
+STA R3, @291
+LDA R3, @4
+STA R3, @292
+LDA R3, @5
+STA R3, @293
+RET
+SETUPLIMIT:STA R2, @510 #Rotina que define os limites
+LDA R3, @320    
+STA R3, @11 #Define limite de unidade
+WAIT1:LDA R3, @353  #Espera o usuário clicar KEY1
+CEQ R3, @6
+JEQ @WAIT1
+STA R3, @510
+LDA R3, @320
+STA R3, @12 #Define limite de dezena
+WAIT2:LDA R3, @353  #Espera o usuário clicar KEY1
+CEQ R3, @6
+JEQ @WAIT2
+STA R3, @510
+LDA R3, @320
+STA R3, @13 #Define limite de centena
+WAIT3:LDA R3, @353  #Espera o usuário clicar KEY1
+CEQ R3, @6
+JEQ @WAIT3
+STA R3, @510
+LDA R3, @320
+STA R3, @14 #Define limite de milhar
+WAIT4:LDA R3, @353  #Espera o usuário clicar KEY1
+CEQ R3, @6
+JEQ @WAIT4
+STA R3, @510
+LDA R3, @320
+STA R3, @15 #Define limite de dezena de milhar
+WAIT5:LDA R3, @353  #Espera o usuário clicar KEY1
+CEQ R3, @6
+JEQ @WAIT5
+STA R3, @510
+LDA R3, @320
+STA R3, @16 #Define limite de centena de milhar
+RET
+VERIFYLIMIT:LDA R3, @0  #Rotina que verifica limite
+CEQ R3, @11 #Compara unidade com seu limite
+JEQ @VERIFY1
+JMP @RETVER
+VERIFY1:LDA R3, @1
+CEQ R3, @12 #Compara dezena com seu limite
+JEQ @VERIFY2
+JMP @RETVER
+VERIFY2:LDA R3, @2
+CEQ R3, @13 #Compara centena com seu limite
+JEQ @VERIFY3
+JMP @RETVER
+VERIFY3:LDA R3, @3
+CEQ R3, @14 #Compara milhar com seu limite
+JEQ @VERIFY4
+JMP @RETVER
+VERIFY4:LDA R3, @4
+CEQ R3, @15 #Compara dezena de milhar com seu limite
+JEQ @VERIFY5
+JMP @RETVER
+VERIFY5:LDA R3, @5
+CEQ R3, @16 #Compara centena de milhar com seu limite
+JEQ @LIMITEATINGIDO
+JMP @RETVER
+LIMITEATINGIDO:LDI R3, $1   #Todo os valores iguais ao limite
+STA R3, @10
+STA R3, @258
+RETVER:RET
+RESET:LDI R3, $0    #Rotina de Reset
+STA R3, @0
+STA R3, @1
+STA R3, @2
+STA R3, @3
+STA R3, @4
+STA R3, @5
+STA R3, @10
+STA R3, @257
+STA R3, @258
+RET

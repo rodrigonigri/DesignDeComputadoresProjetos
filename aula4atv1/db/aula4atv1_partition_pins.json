@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "OUT_EQUATION[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_EQUATION[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_EQUATION[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_EQUATION[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_EQUATION[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_EQUATION[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_EQUATION[6]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT_EQUATION[7]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

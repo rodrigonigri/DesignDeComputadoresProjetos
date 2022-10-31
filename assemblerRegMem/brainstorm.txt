@@ -1,0 +1,63 @@
+Mudanças:
+    Instrução 15 bits (2 a mais pós opcode para o endereço do registrador)
+    Intruções que o endereço dos registradores não importa (XX):
+        -NOP
+        -JMP @Z
+        -JEQ @Z
+        -JSR @Z
+        -RET
+    Instruções que mudam:
+        -LDA R1, @X
+        -SOMA R1, @X
+        -SUB R1, @X
+        -LDI R1, $Y
+        -STA R1, @X
+        -CEQ R1, @X
+        -AND R1, @X
+Registradores disponíveis:
+    R0 => 00
+    R1 => 01
+    R2 => 10
+    R3 => 11
+
+Na Ram:
+    Variáveis:
+        0 => Valor de unidades do contador
+        1 => Valor de dezenas do contador
+        2 => Valor de centenas do contador
+        3 => Valor de unidade de milhares
+        4 => Valor de dezena de milhares
+        5 => Valor de centena de Milhares
+        FALTAM VARIÁVEIS
+
+    Constantes:
+        6 => Valor 0 para Comparações
+        7 => Valor 1 para Incrementos
+        8 => Valor 10 para limite de faixa do display
+
+    Flags:
+        10 => Inibir contagem
+
+Sub-Rotinas:
+    Incremento de valor => KEY0 pressionado
+    
+    Opcional:
+        Escrever variáveis no display hexas
+
+    Limite de Incremento => KEY1 pressionado
+
+    Opcional:
+        Verificar se o limite foi alcançado
+
+    Reiniciar Contagem => FPGA_RESET pressionado
+
+
+
+    LDI R0, $1
+STA R0, @0
+LDA R1, @0
+STA R1, @1
+LDA R2, @1
+STA R2, @2
+LDA R3, @2
+STA R3, @257

@@ -1,0 +1,39 @@
+Na Ram:
+    Variáveis:
+        0 => Valor de unidades do contador
+        1 => Valor de dezenas do contador
+        2 => Valor de centenas do contador
+        3 => Valor de unidade de milhares
+        4 => Valor de dezena de milhares
+        5 => Valor de centena de Milhares
+        
+        11 => Limite de unidade
+        12 => Limite de dezena
+        13 => Limite de centena
+        14 => Limite de milhar
+        15 => Limite de dezena de milhar
+        16 => Limite de centena de milhar
+
+    Constantes:
+        6 => Valor 0 para Comparações
+        7 => Valor 1 para Incrementos
+        8 => Valor 10 para limite de faixa do display
+
+    Flags:
+        10 => Inibir contagem
+
+Sub-Rotinas:
+    Incremento de valor => KEY0 pressionado
+    
+    Opcional:
+        Escrever variáveis no display hexas
+
+    Limite de Incremento => KEY1 pressionado
+
+    Opcional:
+        Verificar se o limite foi alcançado
+
+    Reiniciar Contagem => FPGA_RESET pressionado
+
+LEDR8 => Led de Overflow (RAM 257)
+LEDR9 => Led de Limite Atingido (RAM 258)

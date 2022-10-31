@@ -1,0 +1,32 @@
+Quartus Prime Archive log --	C:/descomp/contador/contador.qarlog
+
+Archive:	C:/descomp/contador/contador.qar
+Date:		Tue Oct 11 11:44:10 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/descomp/contador/Decodificador3x8.vhd
+C:/descomp/contador/ULASomaSub.vhd
+C:/descomp/contador/buffer_3_state_1porta.vhd
+C:/descomp/contador/buffer_3_state_8portas.vhd
+C:/descomp/contador/contador.qpf
+C:/descomp/contador/contador.qsf
+C:/descomp/contador/contador.vhd
+C:/descomp/contador/conversorHex7Seg.vhd
+C:/descomp/contador/decoderInstru.vhd
+C:/descomp/contador/edgeDetector.vhd
+C:/descomp/contador/flipflopGenerico.vhd
+C:/descomp/contador/logicaDesvio.vhd
+C:/descomp/contador/memoriaRAM.vhd
+C:/descomp/contador/memoriaROM.vhd
+C:/descomp/contador/muxGenerico2x1.vhd
+C:/descomp/contador/muxGenerico4x1.vhd
+C:/descomp/contador/processador.vhd
+C:/descomp/contador/registradorGenerico.vhd
+C:/descomp/contador/registradorReset.vhd
+C:/descomp/contador/somaConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 21 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
