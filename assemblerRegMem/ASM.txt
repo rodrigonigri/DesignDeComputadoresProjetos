@@ -8,7 +8,7 @@ STA R0, @293
 STA R0, @256    #Zerando leds
 STA R0, @257
 STA R0, @258
-STA R0, @0  #Armazenando 0 em unidade, dezena, centena, ...
+STA R0, @0      #Armazenando 0 em unidade, dezena, centena, ...
 STA R0, @1
 STA R0, @2
 STA R0, @3
@@ -20,6 +20,12 @@ LDI R0, $1
 STA R0, @7  #Constante de incrementos
 LDI R0, $10
 STA R0, @8  #Constante de limite do display
+LDI R0, $6
+STA R0, @9
+LDI R0, $2
+STA R0, @17
+LDI R0, $4
+STA R0, @18
 LDI R0, $9
 STA R0, @11
 STA R0, @12
@@ -44,12 +50,12 @@ JEQ @FIM
 JSR @RESET
 FIM:JMP @LOOP
 INCREMENTO:STA R2, @511 #Rotina de Incremento Limpar KEY0
-LDA R3, @10  #Carrega flag
-CEQ R3, @6
-JEQ @UNIDADE
-JMP @RETINC
+LDA R3, @10  #Carrega flag de inibir a contagem
+CEQ R3, @6   # vê se flag == 0 
+JEQ @UNIDADE # se não for para inibir contagem (flag==0), jump para unidade
+JMP @RETINC  
 UNIDADE:LDA R3, @0    #---Bloco que verifica unidade
-SOMA R3, @7
+SOMA R3, @7     # incrementa 1     
 CEQ R3, @8  #Compara unidade com 10
 JEQ @UNIDADEOVERFLOW
 STA R3, @0
@@ -58,7 +64,7 @@ UNIDADEOVERFLOW:LDI R3, $0
 STA R3, @0  #---
 LDA R3, @1  #---Bloco que verifica dezena
 SOMA R3, @7
-CEQ R3, @8
+CEQ R3, @9
 JEQ @DEZENAOVERFLOW
 STA R3, @1
 JMP @RETINC
@@ -74,7 +80,7 @@ CENTENAOVERFLOW:LDI R3, $0
 STA R3, @2  #---
 LDA R3, @3  #---Bloco que verifica milhar
 SOMA R3, @7
-CEQ R3, @8
+CEQ R3, @9
 JEQ @MILHAROVERFLOW
 STA R3, @3
 JMP @RETINC
@@ -82,6 +88,8 @@ MILHAROVERFLOW:LDI R3, $0
 STA R3, @3  #---
 LDA R3, @4  #---Bloco que verifica dezena de milhar
 SOMA R3, @7
+CEQ R3, @18
+JEQ @HORAQUATRO
 CEQ R3, @8
 JEQ @DEZMILHAROVERFLOW
 STA R3, @4
@@ -90,8 +98,19 @@ DEZMILHAROVERFLOW:LDI R3, $0
 STA R3, @4  #---
 LDA R3, @5  #---Bloco que verifica centena de milhar
 SOMA R3, @7
-CEQ R3, @8
-JEQ @CENMILHAROVERFLOW
+STA R3, @5
+JMP @RETINC
+HORAQUATRO:STA R3, @4 
+LDA R3, @5
+CEQ R3, @17
+JEQ @FIMDODIA
+JMP @RETINC
+FIMDODIA:LDI R3, $0
+STA R3, @0
+STA R3, @1
+STA R3, @2
+STA R3, @3
+STA R3, @4
 STA R3, @5
 JMP @RETINC
 CENMILHAROVERFLOW:LDI R3, $1    #Se é passou de 9 em centena de milhar, overflow!

@@ -34,6 +34,9 @@ Na Ram:
         6 => Valor 0 para Comparações
         7 => Valor 1 para Incrementos
         8 => Valor 10 para limite de faixa do display
+        9 => Valor 6 para limite de dezena de minuto e segundo do relogio
+        17 => Valor 2 para limite de relogio
+        18 => Valor 4 para limite de relogio
 
     Flags:
         10 => Inibir contagem

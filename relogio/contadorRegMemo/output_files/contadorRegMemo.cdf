@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/thpro/Desktop/DesignDeComputadoresProjetos/relogio/contadorRegMemo/output_files/") File("contadorRegMemo.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/output_files/") File("contadorRegMemo.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
