@@ -84,7 +84,7 @@ architecture assincrona of memoriaROM is
 			tmp(46) := "101101000000111";	-- AND R1, @7
 			tmp(47) := "100001000000110";	-- CEQ R1, @6
 			tmp(48) := "011100000110010";	-- JEQ @FIM
-			tmp(49) := "100100011000010";	-- JSR @RESET
+			tmp(49) := "100100011000001";	-- JSR @RESET
 			tmp(50) := "011000000100011";	-- JMP @LOOP
 			tmp(51) := "010110111111111";	-- STA R2, @511 	#Rotina de Incremento Limpar KEY0
 			tmp(52) := "000111000001010";	-- LDA R3, @10  	#Carrega flag de inibir a contagem
@@ -204,45 +204,41 @@ architecture assincrona of memoriaROM is
 			tmp(166) := "000111000000000";	-- LDA R3, @0  	#Rotina que verifica limite
 			tmp(167) := "100011000001011";	-- CEQ R3, @11 	#Compara unidade com seu limite
 			tmp(168) := "011100010101010";	-- JEQ @VERIFY1
-			tmp(169) := "011000011000001";	-- JMP @RETVER
+			tmp(169) := "011000011000000";	-- JMP @RETVER
 			tmp(170) := "000111000000001";	-- LDA R3, @1
 			tmp(171) := "100011000001100";	-- CEQ R3, @12 	#Compara dezena com seu limite
 			tmp(172) := "011100010101110";	-- JEQ @VERIFY2
-			tmp(173) := "011000011000001";	-- JMP @RETVER
+			tmp(173) := "011000011000000";	-- JMP @RETVER
 			tmp(174) := "000111000000010";	-- LDA R3, @2
 			tmp(175) := "100011000001101";	-- CEQ R3, @13 	#Compara centena com seu limite
 			tmp(176) := "011100010110010";	-- JEQ @VERIFY3
-			tmp(177) := "011000011000001";	-- JMP @RETVER
+			tmp(177) := "011000011000000";	-- JMP @RETVER
 			tmp(178) := "000111000000011";	-- LDA R3, @3
 			tmp(179) := "100011000001110";	-- CEQ R3, @14 	#Compara milhar com seu limite
 			tmp(180) := "011100010110110";	-- JEQ @VERIFY4
-			tmp(181) := "011000011000001";	-- JMP @RETVER
+			tmp(181) := "011000011000000";	-- JMP @RETVER
 			tmp(182) := "000111000000100";	-- LDA R3, @4
 			tmp(183) := "100011000001111";	-- CEQ R3, @15 	#Compara dezena de milhar com seu limite
 			tmp(184) := "011100010111010";	-- JEQ @VERIFY5
-			tmp(185) := "011000011000001";	-- JMP @RETVER
+			tmp(185) := "011000011000000";	-- JMP @RETVER
 			tmp(186) := "000111000000101";	-- LDA R3, @5
 			tmp(187) := "100011000010000";	-- CEQ R3, @16 	#Compara centena de milhar com seu limite
 			tmp(188) := "011100010111110";	-- JEQ @LIMITEATINGIDO
-			tmp(189) := "011000011000001";	-- JMP @RETVER
+			tmp(189) := "011000011000000";	-- JMP @RETVER
 			tmp(190) := "010011000000001";	-- LDI R3, $1   	#Todo os valores iguais ao limite
-			tmp(191) := "010111000001010";	-- STA R3, @10
-			tmp(192) := "010111100000010";	-- STA R3, @258
-			tmp(193) := "101000000000000";	-- RET
-			tmp(194) := "010011000000000";	-- LDI R3, $0    	#Rotina de Reset
-			tmp(195) := "010111000000000";	-- STA R3, @0
-			tmp(196) := "010111000000001";	-- STA R3, @1
-			tmp(197) := "010111000000010";	-- STA R3, @2
-			tmp(198) := "010111000000011";	-- STA R3, @3
-			tmp(199) := "010111000000100";	-- STA R3, @4
-			tmp(200) := "010111000000101";	-- STA R3, @5
-			tmp(201) := "010111000001010";	-- STA R3, @10
-			tmp(202) := "010111100000001";	-- STA R3, @257
-			tmp(203) := "010111100000010";	-- STA R3, @258
-			tmp(204) := "101000000000000";	-- RET
-
-
-
+			tmp(191) := "010111100000010";	-- STA R3, @258
+			tmp(192) := "101000000000000";	-- RET
+			tmp(193) := "010011000000000";	-- LDI R3, $0    	#Rotina de Reset
+			tmp(194) := "010111000000000";	-- STA R3, @0
+			tmp(195) := "010111000000001";	-- STA R3, @1
+			tmp(196) := "010111000000010";	-- STA R3, @2
+			tmp(197) := "010111000000011";	-- STA R3, @3
+			tmp(198) := "010111000000100";	-- STA R3, @4
+			tmp(199) := "010111000000101";	-- STA R3, @5
+			tmp(200) := "010111000001010";	-- STA R3, @10
+			tmp(201) := "010111100000001";	-- STA R3, @257
+			tmp(202) := "010111100000010";	-- STA R3, @258
+			tmp(203) := "101000000000000";	-- RET
 
 
 

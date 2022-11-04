@@ -189,7 +189,6 @@ CEQ R3, @16 #Compara centena de milhar com seu limite
 JEQ @LIMITEATINGIDO
 JMP @RETVER
 LIMITEATINGIDO:LDI R3, $1   #Todo os valores iguais ao limite
-STA R3, @10
 STA R3, @258
 RETVER:RET
 RESET:LDI R3, $0    #Rotina de Reset
