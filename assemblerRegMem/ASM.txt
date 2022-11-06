@@ -37,6 +37,10 @@ LOOP:LDA R1, @352   #Início do LOOP Carrega valor de KEY0
 CEQ R1, @6
 JEQ @DISPLAY    #Se não apertou, pula incremento
 JSR @INCREMENTO
+LDA R1, @354   #Carrega valor de KEY2
+CEQ R1, @6
+JEQ @DISPLAY    #Se não apertou, pula
+JSR @DESLIGAALARME
 DISPLAY:JSR @WRITEDISPLAY   #Escrever no display
 LDA R1, @353    #Carrega valor de KEY1
 CEQ R1, @6
@@ -49,6 +53,9 @@ CEQ R1, @6
 JEQ @FIM
 JSR @RESET
 FIM:JMP @LOOP
+DESLIGAALARME:LDI R1, $0
+STA R1, @258
+RET
 INCREMENTO:STA R2, @511 #Rotina de Incremento Limpar KEY0
 LDA R3, @10  #Carrega flag de inibir a contagem
 CEQ R3, @6   # vê se flag == 0 

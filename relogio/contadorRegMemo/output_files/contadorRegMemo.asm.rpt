@@ -1,5 +1,5 @@
 Assembler report for contadorRegMemo
-Fri Nov 04 17:36:14 2022
+Sun Nov 06 14:36:59 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/output_files/contadorRegMemo.sof
+  5. Assembler Device Options: C:/Users/rodri/Documents/INSPER/6semestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/output_files/contadorRegMemo.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Nov 04 17:36:14 2022 ;
+; Assembler Status      ; Successful - Sun Nov 06 14:36:59 2022 ;
 ; Revision Name         ; contadorRegMemo                       ;
 ; Top-level Entity Name ; contadorRegMemo                       ;
 ; Family                ; Cyclone V                             ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                       ;
-+---------------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                       ;
-+---------------------------------------------------------------------------------------------------------------------------------+
-; C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/output_files/contadorRegMemo.sof ;
-+---------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                                            ;
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                                            ;
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/rodri/Documents/INSPER/6semestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/output_files/contadorRegMemo.sof ;
++------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/output_files/contadorRegMemo.sof ;
-+----------------+------------------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                                  ;
-+----------------+------------------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0061730B                                                                                                                               ;
-; Checksum       ; 0x0061730B                                                                                                                               ;
-+----------------+------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/rodri/Documents/INSPER/6semestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/output_files/contadorRegMemo.sof ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                                                       ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0061A754                                                                                                                                                    ;
+; Checksum       ; 0x0061A754                                                                                                                                                    ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Nov 04 17:36:10 2022
+    Info: Processing started: Sun Nov 06 14:36:54 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off contadorRegMemo -c contadorRegMemo
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Fri Nov 04 17:36:14 2022
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Sun Nov 06 14:36:59 2022
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 
