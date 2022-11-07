@@ -1,3 +1,5 @@
+-- Participantes: Carolina Hirschheimer, Thiago Hampl, Rodrigo Nigri
+
 library ieee;
 use ieee.std_logic_1164.all;
 

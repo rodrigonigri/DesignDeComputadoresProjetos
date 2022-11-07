@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Nov 06 14:35:56 2022
+Analysis & Synthesis Status : Successful - Sun Nov 06 21:53:26 2022
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : contadorRegMemo
 Top-level Entity Name : contadorRegMemo
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 615
+Total registers : 626
 Total pins : 68
 Total virtual pins : 0
 Total block memory bits : 0

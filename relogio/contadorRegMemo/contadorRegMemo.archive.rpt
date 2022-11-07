@@ -1,5 +1,5 @@
 Archive Project report for contadorRegMemo
-Sun Oct 23 19:47:15 2022
+Sun Nov 06 21:57:02 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Sun Oct 23 19:47:15 2022 ;
+; Archive Project Status ; Successful - Sun Nov 06 21:57:02 2022 ;
 ; Revision Name          ; contadorRegMemo                       ;
 ; Top-level Entity Name  ; contadorRegMemo                       ;
 ; Family                 ; Cyclone V                             ;
@@ -51,18 +51,18 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory C:/descomp/contadorRegMemo/
+Info (13213): Using common directory C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/descomp/contadorRegMemo/contadorRegMemo.qar'
+Info: Generated archive 'C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'contadorRegMemo.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Sun Oct 23 19:47:15 2022
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Sun Nov 06 21:57:02 2022
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
@@ -81,6 +81,8 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; conversorHex7Seg.vhd                                         ;
 ; decoderInstru.vhd                                            ;
 ; Decodificador3x8.vhd                                         ;
+; divisorGenerico.vhd                                          ;
+; divisorGenerico_e_Interface.vhd                              ;
 ; edgeDetector.vhd                                             ;
 ; flipflopGenerico.vhd                                         ;
 ; logicaDesvio.vhd                                             ;

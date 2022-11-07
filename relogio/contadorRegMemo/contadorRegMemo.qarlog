@@ -1,33 +1,35 @@
-Quartus Prime Archive log --	C:/descomp/contadorRegMemo/contadorRegMemo.qarlog
+Quartus Prime Archive log --	C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.qarlog
 
-Archive:	C:/descomp/contadorRegMemo/contadorRegMemo.qar
-Date:		Sun Oct 23 19:47:14 2022
+Archive:	C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.qar
+Date:		Sun Nov 06 21:57:02 2022
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
-C:/descomp/contadorRegMemo/Decodificador3x8.vhd
-C:/descomp/contadorRegMemo/ULASomaSub.vhd
-C:/descomp/contadorRegMemo/bancoRegistradoresArqRegMem.vhd
-C:/descomp/contadorRegMemo/buffer_3_state_1porta.vhd
-C:/descomp/contadorRegMemo/buffer_3_state_8portas.vhd
-C:/descomp/contadorRegMemo/contadorRegMemo.qpf
-C:/descomp/contadorRegMemo/contadorRegMemo.qsf
-C:/descomp/contadorRegMemo/contadorRegMemo.vhd
-C:/descomp/contadorRegMemo/conversorHex7Seg.vhd
-C:/descomp/contadorRegMemo/decoderInstru.vhd
-C:/descomp/contadorRegMemo/edgeDetector.vhd
-C:/descomp/contadorRegMemo/flipflopGenerico.vhd
-C:/descomp/contadorRegMemo/logicaDesvio.vhd
-C:/descomp/contadorRegMemo/memoriaRAM.vhd
-C:/descomp/contadorRegMemo/memoriaROM.vhd
-C:/descomp/contadorRegMemo/muxGenerico2x1.vhd
-C:/descomp/contadorRegMemo/muxGenerico4x1.vhd
-C:/descomp/contadorRegMemo/processador.vhd
-C:/descomp/contadorRegMemo/registradorGenerico.vhd
-C:/descomp/contadorRegMemo/registradorReset.vhd
-C:/descomp/contadorRegMemo/somaConstante.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/Decodificador3x8.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/ULASomaSub.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/bancoRegistradoresArqRegMem.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/buffer_3_state_1porta.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/buffer_3_state_8portas.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.qpf
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.qsf
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/conversorHex7Seg.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/decoderInstru.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/divisorGenerico.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/divisorGenerico_e_Interface.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/edgeDetector.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/flipflopGenerico.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/logicaDesvio.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/memoriaRAM.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/memoriaROM.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/muxGenerico2x1.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/muxGenerico4x1.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/processador.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/registradorGenerico.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/registradorReset.vhd
+C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/somaConstante.vhd
 c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
-	======= Total: 22 files to archive =======
+	======= Total: 24 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
