@@ -1,5 +1,5 @@
 Analysis & Synthesis report for contadorRegMemo
-Sun Nov 06 21:53:26 2022
+Tue Nov 08 13:33:21 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -77,13 +77,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 06 21:53:26 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 08 13:33:21 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; contadorRegMemo                             ;
 ; Top-level Entity Name           ; contadorRegMemo                             ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 626                                         ;
+; Total registers                 ; 615                                         ;
 ; Total pins                      ; 68                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -237,25 +237,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 520            ;
+; Estimate of Logic utilization (ALMs needed) ; 514            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 583            ;
+; Combinational ALUT usage for logic          ; 570            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 347            ;
-;     -- 5 input functions                    ; 40             ;
+;     -- 6 input functions                    ; 344            ;
+;     -- 5 input functions                    ; 41             ;
 ;     -- 4 input functions                    ; 68             ;
-;     -- <=3 input functions                  ; 127            ;
+;     -- <=3 input functions                  ; 116            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 626            ;
+; Dedicated logic registers                   ; 615            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 68             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 624            ;
-; Total fan-out                               ; 4822           ;
-; Average fan-out                             ; 3.59           ;
+; Maximum fan-out                             ; 613            ;
+; Total fan-out                               ; 4754           ;
+; Average fan-out                             ; 3.60           ;
 +---------------------------------------------+----------------+
 
 
@@ -264,7 +264,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Entity Name                 ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------------------+--------------+
-; |contadorRegMemo                                  ; 583 (29)            ; 626 (0)                   ; 0                 ; 0          ; 68   ; 0            ; |contadorRegMemo                                                                                 ; contadorRegMemo             ; work         ;
+; |contadorRegMemo                                  ; 570 (29)            ; 615 (0)                   ; 0                 ; 0          ; 68   ; 0            ; |contadorRegMemo                                                                                 ; contadorRegMemo             ; work         ;
 ;    |Decodificador3x8:DECO1|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|Decodificador3x8:DECO1                                                          ; Decodificador3x8            ; work         ;
 ;    |conversorHex7Seg:DECOHEX0|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|conversorHex7Seg:DECOHEX0                                                       ; conversorHex7Seg            ; work         ;
 ;    |conversorHex7Seg:DECOHEX1|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|conversorHex7Seg:DECOHEX1                                                       ; conversorHex7Seg            ; work         ;
@@ -272,8 +272,8 @@ https://fpgasoftware.intel.com/eula.
 ;    |conversorHex7Seg:DECOHEX3|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|conversorHex7Seg:DECOHEX3                                                       ; conversorHex7Seg            ; work         ;
 ;    |conversorHex7Seg:DECOHEX4|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|conversorHex7Seg:DECOHEX4                                                       ; conversorHex7Seg            ; work         ;
 ;    |conversorHex7Seg:DECOHEX5|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|conversorHex7Seg:DECOHEX5                                                       ; conversorHex7Seg            ; work         ;
-;    |divisorGenerico_e_Interface:DIVISORINTERFACE| ; 31 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|divisorGenerico_e_Interface:DIVISORINTERFACE                                    ; divisorGenerico_e_Interface ; work         ;
-;       |divisorGenerico:baseTempo|                 ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|divisorGenerico_e_Interface:DIVISORINTERFACE|divisorGenerico:baseTempo          ; divisorGenerico             ; work         ;
+;    |divisorGenerico_e_Interface:DIVISORINTERFACE| ; 18 (0)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|divisorGenerico_e_Interface:DIVISORINTERFACE                                    ; divisorGenerico_e_Interface ; work         ;
+;       |divisorGenerico:baseTempo|                 ; 18 (18)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|divisorGenerico_e_Interface:DIVISORINTERFACE|divisorGenerico:baseTempo          ; divisorGenerico             ; work         ;
 ;       |flipflopGenerico:registraUmSegundo|        ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|divisorGenerico_e_Interface:DIVISORINTERFACE|flipflopGenerico:registraUmSegundo ; flipflopGenerico            ; work         ;
 ;    |edgeDetector:EDGEKEY1|                        ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|edgeDetector:EDGEKEY1                                                           ; edgeDetector                ; work         ;
 ;    |flipflopGenerico:FFKEY1|                      ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contadorRegMemo|flipflopGenerico:FFKEY1                                                         ; flipflopGenerico            ; work         ;
@@ -307,8 +307,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 626   ;
-; Number of registers using Synchronous Clear  ; 25    ;
+; Total registers                              ; 615   ;
+; Number of registers using Synchronous Clear  ; 14    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 2     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -322,10 +322,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |contadorRegMemo|processador:PROC|registradorGenerico:PC|DOUT[7]   ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |contadorRegMemo|processador:PROC|muxGenerico2x1:MUX1|saida_MUX[4] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |contadorRegMemo|processador:PROC|ULASomaSub:ULA1|saida[7]         ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |contadorRegMemo|processador:PROC|decoderInstru:DECO|saida[4]      ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |contadorRegMemo|processador:PROC|registradorGenerico:PC|DOUT[8]   ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |contadorRegMemo|processador:PROC|muxGenerico2x1:MUX1|saida_MUX[1] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |contadorRegMemo|processador:PROC|ULASomaSub:ULA1|saida[1]         ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |contadorRegMemo|processador:PROC|decoderInstru:DECO|saida[5]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 
 
@@ -549,11 +549,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +---------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: divisorGenerico_e_Interface:DIVISORINTERFACE|divisorGenerico:baseTempo ;
-+----------------+----------+-----------------------------------------------------------------------------------------+
-; Parameter Name ; Value    ; Type                                                                                    ;
-+----------------+----------+-----------------------------------------------------------------------------------------+
-; divisor        ; 25000000 ; Signed Integer                                                                          ;
-+----------------+----------+-----------------------------------------------------------------------------------------+
++----------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; divisor        ; 10000 ; Signed Integer                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -674,31 +674,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 626                         ;
+; arriav_ff             ; 615                         ;
 ;     CLR               ; 2                           ;
 ;     ENA               ; 585                         ;
-;     SCLR              ; 25                          ;
+;     SCLR              ; 14                          ;
 ;     plain             ; 14                          ;
-; arriav_lcell_comb     ; 589                         ;
-;     arith             ; 51                          ;
+; arriav_lcell_comb     ; 576                         ;
+;     arith             ; 40                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 34                          ;
+;         1 data inputs ; 23                          ;
 ;         2 data inputs ; 6                           ;
 ;         4 data inputs ; 4                           ;
 ;         5 data inputs ; 6                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 537                         ;
+;     normal            ; 535                         ;
 ;         1 data inputs ; 7                           ;
 ;         2 data inputs ; 70                          ;
 ;         3 data inputs ; 15                          ;
 ;         4 data inputs ; 64                          ;
-;         5 data inputs ; 34                          ;
-;         6 data inputs ; 347                         ;
+;         5 data inputs ; 35                          ;
+;         6 data inputs ; 344                         ;
 ; boundary_port         ; 68                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.30                       ;
-; Average LUT depth     ; 6.38                        ;
+; Average LUT depth     ; 6.46                        ;
 +-----------------------+-----------------------------+
 
 
@@ -707,7 +707,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -717,7 +717,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Nov 06 21:52:51 2022
+    Info: Processing started: Tue Nov 08 13:32:55 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contadorRegMemo -c contadorRegMemo
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
@@ -773,8 +773,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file buffer_
     Info (12022): Found design unit 1: buffer_3_state_1porta-comportamento File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/buffer_3_state_1porta.vhd Line: 11
     Info (12023): Found entity 1: buffer_3_state_1porta File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/buffer_3_state_1porta.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file contadorregmemo.vhd
-    Info (12022): Found design unit 1: contadorRegMemo-arquitetura File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 26
-    Info (12023): Found entity 1: contadorRegMemo File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 4
+    Info (12022): Found design unit 1: contadorRegMemo-arquitetura File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 28
+    Info (12023): Found entity 1: contadorRegMemo File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregmem.vhd
     Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/bancoRegistradoresArqRegMem.vhd Line: 23
     Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/bancoRegistradoresArqRegMem.vhd Line: 5
@@ -785,9 +785,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file divisor
     Info (12022): Found design unit 1: divisorGenerico_e_Interface-interface File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/divisorGenerico_e_Interface.vhd Line: 13
     Info (12023): Found entity 1: divisorGenerico_e_Interface File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/divisorGenerico_e_Interface.vhd Line: 5
 Info (12127): Elaborating entity "contadorRegMemo" for the top level hierarchy
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 111
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 113
-Info (12128): Elaborating entity "processador" for hierarchy "processador:PROC" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 116
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 113
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 115
+Info (12128): Elaborating entity "processador" for hierarchy "processador:PROC" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 118
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:PROC|muxGenerico2x1:MUX1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/processador.vhd Line: 58
 Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "processador:PROC|muxGenerico4x1:MUXJUMP" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/processador.vhd Line: 65
 Info (12128): Elaborating entity "decoderInstru" for hierarchy "processador:PROC|decoderInstru:DECO" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/processador.vhd Line: 72
@@ -797,15 +797,15 @@ Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processado
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:PROC|registradorGenerico:FlagEq" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/processador.vhd Line: 91
 Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:PROC|somaConstante:incrementaPC" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/processador.vhd Line: 98
 Info (12128): Elaborating entity "ULASomaSub" for hierarchy "processador:PROC|ULASomaSub:ULA1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/processador.vhd Line: 103
-Info (12128): Elaborating entity "Decodificador3x8" for hierarchy "Decodificador3x8:DECO1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 120
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REGLEDR" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 124
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REGHEX0" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 133
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DECOHEX0" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 151
-Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "buffer_3_state_8portas:BUFSW0" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 194
-Info (12128): Elaborating entity "buffer_3_state_1porta" for hierarchy "buffer_3_state_1porta:BUFSW1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 197
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:EDGEKEY1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 216
-Info (12128): Elaborating entity "flipflopGenerico" for hierarchy "flipflopGenerico:FFKEY1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 219
-Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:DIVISORINTERFACE" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 240
+Info (12128): Elaborating entity "Decodificador3x8" for hierarchy "Decodificador3x8:DECO1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 122
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REGLEDR" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 126
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REGHEX0" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 135
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DECOHEX0" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 153
+Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "buffer_3_state_8portas:BUFSW0" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 196
+Info (12128): Elaborating entity "buffer_3_state_1porta" for hierarchy "buffer_3_state_1porta:BUFSW1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 199
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:EDGEKEY1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 218
+Info (12128): Elaborating entity "flipflopGenerico" for hierarchy "flipflopGenerico:FFKEY1" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 221
+Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:DIVISORINTERFACE" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 242
 Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico_e_Interface:DIVISORINTERFACE|divisorGenerico:baseTempo" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/divisorGenerico_e_Interface.vhd Line: 18
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276004): RAM logic "processador:PROC|bancoRegistradoresArqRegMem:REGS|registrador" is uninferred due to inappropriate RAM size File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/bancoRegistradoresArqRegMem.vhd Line: 29
@@ -823,15 +823,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 12
-Info (21057): Implemented 1238 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Insper/6oSemestre/DesignDeComputadores/DesignDeComputadoresProjetos/relogio/contadorRegMemo/contadorRegMemo.vhd Line: 14
+Info (21057): Implemented 1225 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 1170 logic cells
+    Info (21061): Implemented 1157 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Sun Nov 06 21:53:26 2022
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Tue Nov 08 13:33:21 2022
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:59
 
 

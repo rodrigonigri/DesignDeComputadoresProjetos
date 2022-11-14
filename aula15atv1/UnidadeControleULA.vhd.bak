@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decoderInstru is
+  port ( opcode : in std_logic_vector(5 downto 0);
+			tipoR : in std_logic;
+			funct : in std_logic_vector(5 downto 0);
+         operacao : out std_logic;
+  );
+end entity;
+
+architecture comportamento of decoderInstru is
+
+  constant lw  : std_logic_vector(5 downto 0) := "100011";
+  constant sw  : std_logic_vector(5 downto 0) := "101011";
+  constant beq : std_logic_vector(5 downto 0) := "000100";
+  constant jmp : std_logic_vector(5 downto 0) := "000010";
+  constant op_r : std_logic_vector(5 downto 0) := "000000"; 
+  
+
+  begin
+  -- primeiro bit da saida: selMuxBeqPc4
+  -- segundo bit da saida: Mux(Rt/Rd)
+  -- terceiro bit da saida: habEscritaReg
+  -- quarto bit da saida: selMuxRtImed
+  -- quinto ao décimo bit da saida: opcode
+  -- decimo primeiro bit da saida: tipoR
+  -- decimo segundo bit da saida: mux(ULA/mem)
+  -- decimo terceiro bit da saida: BEQ
+  -- decimo quarto bit da saida: habLeituraMEM
+  -- decimo quinto bit da saida: habEscritaMEM
+  
+  operacao <= "1" when opcode = sadf and tipoR = 
+			  
+end architecture;
