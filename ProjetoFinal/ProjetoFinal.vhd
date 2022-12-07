@@ -42,7 +42,7 @@ architecture arquitetura of ProjetoFinal is
 	signal BEQ : std_logic;
 	signal Rs,Rt, Rd : std_logic_vector (4 downto 0);
 	signal opcode : std_logic_vector (5 downto 0);
-	signal SaidaUnidadeControle : std_logic_vector (19 downto 0);
+	signal SaidaUnidadeControle : std_logic_vector (21 downto 0);
 	signal habEscritaReg, habLeituraMEM, habEscritaMEM : std_logic;
 	signal operacao : std_logic_vector(2 downto 0);
 	signal Imediato : std_logic_vector (15 downto 0);
@@ -71,7 +71,13 @@ architecture arquitetura of ProjetoFinal is
 	signal UpperImediato : std_logic_vector (31 downto 0);
 	signal JR : std_logic;
 	signal ORI_ANDI : std_logic;
+	signal LBU : std_logic;
 	signal SaidaMuxBeqPc : std_logic_vector (31 downto 0);
+	signal ByteUnsigned : std_logic_vector (31 downto 0);
+	signal SaidaMuxRam : std_logic_vector (31 downto 0);
+	signal EntradaEscrita : std_logic_vector (31 downto 0);
+	signal StoreByteUnsigned : std_logic_vector (31 downto 0);
+	signal SB : std_logic;
 
 
 begin
@@ -148,10 +154,20 @@ RAM : entity work.memoriaRAM   generic map (dataWidth => larguraDados, addrWidth
           port map (addr => Saida_ULA, 
 						  we => habEscritaMEM, 
 						  re => habLeituraMEM, 
-						  dado_in => Banco_B, 
+						  dado_in => EntradaEscrita, 
 						  dado_out => RAM_Mux, 
 						  clk => CLK, 
 						  habilita =>'1');
+
+						  
+MUXSB : entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
+			port map( entradaA_MUX => Banco_B,
+                 entradaB_MUX =>  StoreByteUnsigned,
+                 seletor_MUX => SB,
+                 saida_MUX => EntradaEscrita);
+					  
+ComprimeSB : entity work.comprimeUnsigned
+          port map (Sinal_IN => Banco_B, Sinal_OUT =>  StoreByteUnsigned);
 
 -- ESTENDE SINAL
 EstendeSinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
@@ -161,6 +177,9 @@ EstendeSinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrad
 			 
 EstendeLUI : entity work.estendeLUI   generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
           port map (estendeSinal_IN => Imediato, estendeSinal_OUT =>  UpperImediato);
+			 
+ComprimeLBU : entity work.comprimeUnsigned
+          port map (Sinal_IN => RAM_Mux, Sinal_OUT =>  ByteUnsigned);
 
 MUXBeqPC :  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
         port map( entradaA_MUX => SaidaMuxVerBeq,
@@ -176,11 +195,16 @@ MUXJR :  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
 					  
 MuxUlaRamBanco :  entity work.muxGenerico4x1 generic map (larguraDados => larguraDados)
         port map( entradaA_MUX => Saida_ULA,
-                 entradaB_MUX =>  RAM_Mux,
+                 entradaB_MUX =>  SaidaMuxRam,
 					  entradaC_MUX =>  Soma_PC,
 					  entradaD_MUX =>  UpperImediato,
                  seletor_MUX => muxUlaMem,
                  saida_MUX => Mux_Banco);
+MUXLBU :  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
+        port map( entradaA_MUX => RAM_Mux,
+                 entradaB_MUX =>  ByteUnsigned,
+                 seletor_MUX => LBU,
+                 saida_MUX => SaidaMuxRam);
 					  
 MuxRdRt :  entity work.muxGenerico4x1 generic map (larguraDados => 5)
         port map( entradaA_MUX => Rt,
@@ -287,24 +311,28 @@ opcode <= SaidaROM(31 downto 26);
   -- sétimo bit da saida: selMuxRtImed
   -- oitavo ao décimo terceiro bit da saida: opcode
   -- decimo quarto bit da saida: tipoR
-  -- decimo quinto bit da saida: mux(ULA/mem)[0]
-  -- decimo sexto bit da saida: mux(ULA/mem)[1]
-  -- decimo sétimo bit da saida: BEQ
-  -- decimo oitavo bit da saida: BNE
-  -- decimo nono bit da saida: habLeituraMEM
-  -- vigésimo bit da saida: habEscritaMEM
+  -- decimo quinto bit da saida: SB
+  -- decimo sexto bit da saida: mux(ULA/mem)[0]
+  -- decimo sétimo bit da saida: mux(ULA/mem)[1]
+  -- decimo oitavoo bit da saida: BEQ
+  -- decimo nono bit da saida: BNE
+  -- vigésimo bit da saída: LBU
+  -- vigésimo primeiro bit da saida: habLeituraMEM
+  -- vigésimo segundo bit da saida: habEscritaMEM
 
-JR <= SaidaUnidadeControle(19);
-selMuxBeqPc4 <= SaidaUnidadeControle(18);
-muxRtRd <= SaidaUnidadeControle(17 downto 16);
-ORI_ANDI <= SaidaUnidadeControle(15);
-habEscritaReg <= SaidaUnidadeControle(14);
-selMuxRtImed <= SaidaUnidadeControle(13);
-opcodeSaidaDecoder <= SaidaUnidadeControle(12 downto 7);
-tipoR <= SaidaUnidadeControle(6);
-muxUlaMem <= SaidaUnidadeControle(5 downto 4);
-BEQ <= SaidaUnidadeControle(3);
-BNE <= SaidaUnidadeControle(2);
+JR <= SaidaUnidadeControle(21);
+selMuxBeqPc4 <= SaidaUnidadeControle(20);
+muxRtRd <= SaidaUnidadeControle(19 downto 18);
+ORI_ANDI <= SaidaUnidadeControle(17);
+habEscritaReg <= SaidaUnidadeControle(16);
+selMuxRtImed <= SaidaUnidadeControle(15);
+opcodeSaidaDecoder <= SaidaUnidadeControle(14 downto 9);
+tipoR <= SaidaUnidadeControle(8);
+SB <= SaidaUnidadeControle(7);
+muxUlaMem <= SaidaUnidadeControle(6 downto 5);
+BEQ <= SaidaUnidadeControle(4);
+BNE <= SaidaUnidadeControle(3);
+LBU <= SaidaUnidadeControle(2);
 habLeituraMEM <= SaidaUnidadeControle(1);
 habEscritaMEM <= SaidaUnidadeControle(0);
 
